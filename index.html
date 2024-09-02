@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <!-- Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Animate.css CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <style>
+    body {
+      background-color: #123456;
+    }
+    footer{
+      color: rgb(63, 62, 62);
+      text-align: center;
+      position: sticky;
+    }
+  </style>
+</head>
+<body>
+  <div class="min-h-screen flex items-center justify-center">
+    <div class="bg-white bg-opacity-50 backdrop-filter backdrop-blur-lg rounded-lg shadow-lg p-8 w-full max-w-md animate__animated animate__fadeInDown">
+      <h1 class="text-3xl font-bold text-center text-blue-600 mb-6">Contact Us</h1>
+      <form action="https://api.web3forms.com/submit" method="POST" class="bg-gray-500 mt-50 p-6 shadow-sm space-y-2">
+        <input type="hidden" name="access_key" value="5c1ec9bc-216b-47e2-a360-ac3351befd5b" />
+
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+            Username
+          </label>
+          <input
+            type="text"
+            id="username"
+            name="name"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            placeholder="Enter your username"
+          />
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+            Email
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            placeholder="Enter your email"
+          />
+        </div>
+        <div class="mb-6">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="message">
+            Message
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            placeholder="Enter your message"
+            rows="4"
+          ></textarea>
+        </div>
+        <div class="flex items-center justify-between">
+          <button
+            type="submit"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline animate__animated animate__pulse animate__infinite">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <footer id="footer"></footer>
+</body>
+<script>
+  var date = new Date().toLocaleDateString('en-GB');
+  document.getElementById("footer").innerText = `Copyright created by Aftab Mumtaz ${date}`;
+</script>
+</html>
